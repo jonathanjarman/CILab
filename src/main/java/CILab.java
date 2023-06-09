@@ -12,23 +12,23 @@ public class CILab implements CILabInterface {
     }
 
     @Override
-    public boolean detectCapitalUse() {
+    public boolean detectCapitalUse() { //this method
         if (myString == null || myString.isEmpty())
             return true;
 
-        boolean allUpperCase = true;
-        boolean allLowerCase = true;
-        boolean onlyFirstCapital = true;
+        boolean allUpperCase = true; // Flag to track if all letters are uppercase
+        boolean allLowerCase = true;  // Flag to track if all letters are lowercase
+        boolean onlyFirstCapital = true; // Flag to track if only the first letter is capital
 
         for (int i = 0; i < myString.length(); i++) {
             char c = myString.charAt(i);
             if (Character.isLowerCase(c)) {
-                allUpperCase = false;
+                allUpperCase = false; // Lowercase letter found, not all letters are uppercase
                 if (i == 0) {
                     onlyFirstCapital = false;
                 }
             } else if (Character.isUpperCase(c)) {
-                allLowerCase = false;
+                allLowerCase = false; // Uppercase letter found, not all letters are lowercase
                 if (i > 0) {
                     onlyFirstCapital = false;
                 }
