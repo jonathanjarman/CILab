@@ -12,7 +12,7 @@ public class CILab implements CILabInterface {
     }
 
     @Override
-    public boolean detectCapitalUse() {
+    public boolean detectCapitalUse() { //this method
         if (myString == null || myString.isEmpty())
             return true;
 
@@ -36,7 +36,7 @@ public class CILab implements CILabInterface {
                 allLowerCase = false;
                 allUpperCase = false;
                 if (i > 0) {
-                    onlyFirstCapital = false; // Uppercase letter found after the first letter, not only the first letter is capital
+                    onlyFirstCapital = false;
                 }
             }
         }
